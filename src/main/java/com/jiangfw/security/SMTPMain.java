@@ -1,13 +1,14 @@
 package com.jiangfw.security;
 
 public class SMTPMain {
-	public static void main(String[] args) {
-		// 用户名密码
-		String sender = "cnsmtp01@163.com";
-		String receiver = "cnsmtp02@163.com";
-		String password = "computer";
-		
-		// 将用户名和密码进行Base64编码
+
+    public static void main(String[] args) {
+        // 用户名密码
+        String sender = "cnsmtp01@163.com";
+        String receiver = "cnsmtp02@163.com";
+        String password = "computer";
+
+        // 将用户名和密码进行Base64编码
 //		String userBase64 = Base64Util.encryptBase64(sender.substring(0,
 //				sender.indexOf("@")).getBytes());
 //		String passBase64 = Base64Util.encryptBase64(password.getBytes());
@@ -60,5 +61,5 @@ public class SMTPMain {
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-	}
+    }
 }

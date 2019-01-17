@@ -3,47 +3,48 @@ package com.jiangfw.common.sort;
 import java.util.Arrays;
 
 /**
-* 直接插入排序：
-* 注意所有排序都是从小到大排。
-*/
+ * 直接插入排序：
+ * 注意所有排序都是从小到大排。
+ */
 
-public class InsertSort {   
-  
-    /**  
-     * 排序算法的实现，对数组中指定的元素进行排序  
-     * @param array 待排序的数组  
-     * @param from 从哪里开始排序  
-     * @param end 排到哪里  
-     * @param c 比较器  
-     */  
+public class InsertSort {
+
+    /**
+     * 排序算法的实现，对数组中指定的元素进行排序
+     *
+     * @param array 待排序的数组
+     * @param from 从哪里开始排序
+     * @param end 排到哪里
+     * @param c 比较器
+     */
     public void insert(Integer[] array, int from, int end) {   
   
         /*  
          * 第一层循环：对待插入（排序）的元素进行循环  
          * 从待排序数组断的第二个元素开始循环，到最后一个元素（包括）止  
-         */  
-        for (int i=from+1; i<=end; i++) {   
+         */
+        for (int i = from + 1; i <= end; i++) {
             /*  
              * 第二层循环：对有序数组进行循环，且从有序数组最第一个元素开始向后循环  
              * 找到第一个大于待插入的元素  
              * 有序数组初始元素只有一个，且为源数组的第一个元素，一个元素数组总是有序的  
-             */  
-			for (int j = from; j < i; j++) {
-				Integer insertedElem = array[i];// 待插入到有序数组的元素
-				// 从有序数组中最一个元素开始查找第一个大于待插入的元素
-				if ((array[j].compareTo(insertedElem)) > 0) {
-					// 找到插入点后，从插入点开始向后所有元素后移一位
-					move(array, j, i - 1);
-					// 将待排序元素插入到有序数组中
-					array[j] = insertedElem;
-					break;
-				}
-				
-				System.out.println(Arrays.toString(array));
-				// System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
-			}   
+             */
+            for (int j = from; j < i; j++) {
+                Integer insertedElem = array[i];// 待插入到有序数组的元素
+                // 从有序数组中最一个元素开始查找第一个大于待插入的元素
+                if ((array[j].compareTo(insertedElem)) > 0) {
+                    // 找到插入点后，从插入点开始向后所有元素后移一位
+                    move(array, j, i - 1);
+                    // 将待排序元素插入到有序数组中
+                    array[j] = insertedElem;
+                    break;
+                }
+
+                System.out.println(Arrays.toString(array));
+                // System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            }
         }
-        
+
         //=======以下是java.util.Arrays的插入排序算法的实现   
         /*  
          * 该算法看起来比较简洁一j点，有点像冒泡算法。  
@@ -62,36 +63,36 @@ public class InsertSort {
                 swap(array, j, j - 1);  
             }  
         }  
-        */  
-    }   
-	
-	
-	 /**  
-	 * 数组元素后移  
-	 * @param array 待移动的数组  
-	 * @param startIndex 从哪个开始移  
-	 * @param endIndex 到哪个元素止  
-	 */  
-	public void move(Integer[] array, int startIndex, int endIndex) {   
-		for (int i = endIndex; i >= startIndex; i--) {   
-			array[i+1] = array[i];   
-		}   
-	}   
+        */
+    }
 
-	
-    /**  
-     * 测试  
-     * @param args  
-     */  
-    public static void main(String[] args) {   
-        Integer[] intgArr = { 5, 9, 1, 4, 2, 6, 3, 8, 0, 7 };   
+
+    /**
+     * 数组元素后移
+     *
+     * @param array 待移动的数组
+     * @param startIndex 从哪个开始移
+     * @param endIndex 到哪个元素止
+     */
+    public void move(Integer[] array, int startIndex, int endIndex) {
+        for (int i = endIndex; i >= startIndex; i--) {
+            array[i + 1] = array[i];
+        }
+    }
+
+
+    /**
+     * 测试
+     */
+    public static void main(String[] args) {
+        Integer[] intgArr = {5, 9, 1, 4, 2, 6, 3, 8, 0, 7};
         System.out.println(Arrays.toString(intgArr));
         System.out.println("**************************************");
-        InsertSort insertSort = new InsertSort();   
-        insertSort.insert(intgArr,0,intgArr.length-1);
+        InsertSort insertSort = new InsertSort();
+        insertSort.insert(intgArr, 0, intgArr.length - 1);
         System.out.println("**************************************");
-        for(Integer intObj:intgArr){
-			System.out.print(intObj + " ");
+        for (Integer intObj : intgArr) {
+            System.out.print(intObj + " ");
         }
-    }   
+    }
 }  

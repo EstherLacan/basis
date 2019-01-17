@@ -4,16 +4,20 @@ import com.jiangfw.common.lang.test.json.entity.Address;
 import com.jiangfw.common.lang.test.json.entity.CycleObject;
 import com.jiangfw.common.lang.test.json.entity.Person;
 import com.jiangfw.common.lang.test.json.entity.TestBean;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import net.sf.ezmorph.object.DateMorpher;
-import net.sf.json.*;
+import net.sf.json.JSON;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
+import net.sf.json.JSONSerializer;
+import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonBeanProcessor;
 import net.sf.json.util.CycleDetectionStrategy;
 import net.sf.json.util.JSONUtils;
 import org.apache.commons.lang.StringUtils;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * Hello 此代码源于开源项目E3,原作者：黄云辉
@@ -85,7 +89,7 @@ public class JsonTest {
                 new JsonBeanProcessor() {
 
                     public JSONObject processBean(Object bean,
-                                                  JsonConfig jsonConfig) {
+                            JsonConfig jsonConfig) {
                         if (!(bean instanceof Person)) {
                             return JSONObject.fromObject(bean);
                         }

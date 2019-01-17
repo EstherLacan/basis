@@ -1,11 +1,10 @@
 package com.jiangfw.test;
 
 import com.jiangfw.common.media.UUID;
-import sun.misc.BASE64Encoder;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
+import sun.misc.BASE64Encoder;
 
 
 public class TestByte {
@@ -34,7 +33,6 @@ public class TestByte {
         System.out.println(uuid.toString());
         System.out.println(UUID.randomUUID());
         System.out.println(UUID.randomUUID());
-
 
         String value = System.currentTimeMillis() + new Random().nextInt() + "";
         //获取数据指纹，指纹是唯一的

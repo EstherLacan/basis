@@ -2,7 +2,7 @@ package com.jiangfw.test.proxy;
 
 
 /**
- * 动态代理类使用到了一个接口InvocationHandler和一个代理类Proxy ，这两个类配合使用实现了动态代理的功能。
+ * 动态代理类使用到了一个接口InvocationHandler和一个代理类Proxy ，这两个类配合使用实现了动态代理的功能.
  * 那么什么是动态代理呢？
  * 我们平常说的代理类是指： 给每个具体类写一个代理类，以后要使用某个具体类时，只要创建它的代理类的对象，然后调用代理类的方法就可以了。
  * 可是如果现在有许多的具体类，那就需要有许多的代理类才可以，这样很显然不合适。所以动态代理就应运而生了，我们只要写一个类实现
@@ -13,6 +13,6 @@ package com.jiangfw.test.proxy;
 //接口类
 interface AbstractClass {
 
-	public void show();
+    public void show();
 
 }

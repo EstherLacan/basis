@@ -13,12 +13,13 @@ public class ZipUtil {
     /**
      * 解压缩zip包
      *
-     * @param zipFilePath        zip文件的全路径
-     * @param unzipFilePath      解压后的文件保存的路径
+     * @param zipFilePath zip文件的全路径
+     * @param unzipFilePath 解压后的文件保存的路径
      * @param includeZipFileName 解压后的文件保存的路径是否包含压缩文件的文件名。true-包含；false-不包含
      */
     @SuppressWarnings("unchecked")
-    public static void unzip(String zipFilePath, String unzipFilePath, boolean includeZipFileName) throws Exception {
+    public static void unzip(String zipFilePath, String unzipFilePath, boolean includeZipFileName)
+            throws Exception {
         File zipFile = new File(zipFilePath);
         //如果解压后的文件保存路径包含压缩文件的文件名，则追加该文件名到解压路径
         if (includeZipFileName) {

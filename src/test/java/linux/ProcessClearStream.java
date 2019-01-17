@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
  * @description 清除process里的InputStream和ErrorStream 缓存
  */
 public class ProcessClearStream extends Thread {
+
     private InputStream inputStream;
     private String type;
 

@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  * https://www.toutiao.com/a6640810900565525006
  *
  * @Author: jiangfw
- * @date: 2019/1/18.
+ * @date: 2019/1/18
  */
 public class TestSimpleDateFormat {
 

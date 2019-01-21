@@ -22,7 +22,7 @@ class DynamicProxyTest {
         //创建具体类ClassB的处理对象
         Invoker invoker2 = new Invoker(new ClassB());
         //获得具体类ClassB的代理
-//		ClassLoader loader=AbstractClass.class.getClassLoader();
+        //ClassLoader loader=AbstractClass.class.getClassLoader();
         AbstractClass ac2 = (AbstractClass) Proxy.newProxyInstance(
                 AbstractClass.class.getClassLoader(),
                 new Class[]{AbstractClass.class}, invoker2);

@@ -30,7 +30,6 @@ public class CyclicBarrierDemo {
          *
          * @see Thread#run()
          */
-        @Override
         public void run() {
             try {
                 //等待所有士兵到齐
@@ -79,7 +78,6 @@ public class CyclicBarrierDemo {
          *
          * @see Thread#run()
          */
-        @Override
         public void run() {
             if (flag) {
                 System.out.println("司令:[士兵" + n + "个,任务完成!]");

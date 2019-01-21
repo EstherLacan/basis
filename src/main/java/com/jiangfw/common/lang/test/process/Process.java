@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
 /**
- * <p>Description:</p>
+ * Description:
  *
  * @author jiangfengwei
  * @since 2013-9-16
@@ -36,7 +35,15 @@ public class Process {
     private boolean finish = false;
 
     /**
-     *
+     * Constructor
+     */
+    public Process(String name, Map<Resource, Integer> max) {
+        this.name = name;
+        this.max = max;
+        //    this.setNeed();
+    }
+
+    /**
      * @return
      */
     public List<Map<Resource, Integer>> getNeed() {
@@ -57,15 +64,6 @@ public class Process {
     }
 
     /**
-     * Constructor
-     */
-    public Process(String name, Map<Resource, Integer> max) {
-        this.name = name;
-        this.max = max;
-        //	this.setNeed();
-    }
-
-    /**
      * 向系统请求资源
      */
     public boolean Request(Map<Resource, Integer> available) {
@@ -73,7 +71,7 @@ public class Process {
         Object[] all = allResSet.toArray();
         for (int i = 0; i < all.length; i++) {
             int r = available.get((Resource) all[i]);
-            /**如果当前可分配的资源数矩阵元素出现小于需求量，则分配不成功*/
+            /** 如果当前可分配的资源数矩阵元素出现小于需求量，则分配不成功 */
             if (need.get((Resource) all[i]) > r) {
                 System.out.println((Resource) all[i] + "分配不成功");
                 return false;
@@ -85,8 +83,8 @@ public class Process {
     }
 
     /**
-     * 进程执行完后，释放占用的资源<BR>
-     * （即系统中可利用资源数目会相应增加）<BR>
+     * 进程执行完后，释放占用的资源<br>
+     * （即系统中可利用资源数目会相应增加）<br>
      * Set中的toArray()方法不能立即强制类型转化不能:(Resource)all.toArray()
      */
     private void clear(Map<Resource, Integer> available) {
@@ -94,9 +92,10 @@ public class Process {
         Object[] allResSet = all.toArray();
         for (int i = 0; i < allResSet.length; i++) {
             int sum = max.get((Resource) allResSet[i]);
-            /*在这强制转化一下
-			String是一种类型， String[]是另一种类型，这是不同的概念。
-			Object可以强转为String（只要可以）不代表Object[]类型可以强转为String[]类型。*/
+
+      /*在这强制转化一下
+      String是一种类型， String[]是另一种类型，这是不同的概念。
+      Object可以强转为String（只要可以）不代表Object[]类型可以强转为String[]类型。*/
             available.put((Resource) allResSet[i], available.get((Resource) allResSet[i]) + sum);
         }
         this.max = null;
@@ -125,5 +124,4 @@ public class Process {
     public Map<Resource, Integer> getMax() {
         return max;
     }
-
 }

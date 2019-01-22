@@ -4,11 +4,14 @@ import com.jiangfw.common.media.UUID;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
-import sun.misc.BASE64Encoder;
+import org.apache.commons.codec.binary.Base64;
 
 
 public class TestByte {
 
+    /**
+     * main.
+     */
     public static void main(String[] args) {
 
         int aa = 10;
@@ -17,17 +20,17 @@ public class TestByte {
         aa = aa ^ bb;
         bb = aa ^ bb;
         aa = aa ^ bb;
-//		System.out.println("a:"+aa+",b:"+bb);
-//		System.out.println(aa^0);
-//		System.out.println(aa^1);
-//		System.out.println(Integer.toBinaryString(aa));
-//		System.out.println(Integer.toBinaryString(~(aa^0)));
-//		System.out.println(Integer.toBinaryString(aa^~0));
-//		System.out.println(Integer.toBinaryString(~aa));
-//		System.out.println(Integer.toBinaryString(~0));
-//		System.out.println(Integer.reverse(-2147483648));
-//		System.out.println(~aa);
-//		System.out.println(~(~aa-1));
+        //System.out.println("a:"+aa+",b:"+bb);
+        //System.out.println(aa^0);
+        //System.out.println(aa^1);
+        //System.out.println(Integer.toBinaryString(aa));
+        //System.out.println(Integer.toBinaryString(~(aa^0)));
+        //System.out.println(Integer.toBinaryString(aa^~0));
+        //System.out.println(Integer.toBinaryString(~aa));
+        //System.out.println(Integer.toBinaryString(~0));
+        //System.out.println(Integer.reverse(-2147483648));
+        //System.out.println(~aa);
+        //System.out.println(~(~aa-1));
 
         UUID uuid = UUID.randomUUID();
         System.out.println(uuid.toString());
@@ -40,10 +43,10 @@ public class TestByte {
             MessageDigest md = MessageDigest.getInstance("md5");
             byte[] b = md.digest(value.getBytes());//产生数据的指纹
             //Base64编码
-            BASE64Encoder be = new BASE64Encoder();
+            Base64 be = new Base64();
             be.encode(b);
             System.out.println(be.encode(b));
-//					return be.encode(b);//制定一个编码
+            //return be.encode(b);//制定一个编码
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }

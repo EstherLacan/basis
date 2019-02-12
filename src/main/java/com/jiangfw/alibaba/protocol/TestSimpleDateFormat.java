@@ -39,7 +39,7 @@ public class TestSimpleDateFormat {
                     200,
                     0L,
                     TimeUnit.MILLISECONDS,
-                    new LinkedBlockingQueue<Runnable>(1024),
+                    new LinkedBlockingQueue<>(1024),
                     namedThreadFactory,
                     new ThreadPoolExecutor.AbortPolicy());
     /**

@@ -1,4 +1,4 @@
-package com.jiangfw.lock;
+package com.jiangfw.concurrent;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;

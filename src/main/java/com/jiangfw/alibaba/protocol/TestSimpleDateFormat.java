@@ -15,7 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 《阿里巴巴Java开发手册(终极版).pdf》.
- * 编程规约->(六)并发处理->5.【强制】SimpleDateFormat 是线程不安全的类，一般不要定义为static变量，如果定义为static，必须加锁，或者使用DateUtils工具类。
+ * 编程规约->(六)并发处理->5.【强制】SimpleDateFormat 是线程不安全的类，一般不要定义为static变量，
+ * 如果定义为static，必须加锁，或者使用DateUtils工具类。
  * https://www.toutiao.com/a6640810900565525006
  *
  * @Author: jiangfw

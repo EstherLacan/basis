@@ -6,7 +6,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * 通过不同的种类的硬币，组合成指定的金额，并且用最少的硬币数.
- * Created by jWX542257 on 2019/2/11.
+ * Created by EstherLacan on 2019/2/11.
  */
 public class CollectionCoins {
 

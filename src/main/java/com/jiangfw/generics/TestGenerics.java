@@ -2,7 +2,7 @@ package com.jiangfw.generics;
 
 /**
  * 使用泛型的上界 extends 和下界 supers.
- * Created by jWX542257 on 2019/1/25.
+ * Created by EstherLacan on 2019/1/25.
  */
 public class TestGenerics {
 

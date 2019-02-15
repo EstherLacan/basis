@@ -1,7 +1,7 @@
 package com.jiangfw.algo.dp;
 
 /**
- * Created by jWX542257 on 2019/2/11.
+ * Created by EstherLacan on 2019/2/11.
  */
 public class Books {
 

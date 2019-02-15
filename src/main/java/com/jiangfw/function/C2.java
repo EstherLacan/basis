@@ -1,7 +1,7 @@
 package com.jiangfw.function;
 
 /**
- * Created by jWX542257 on 2019/1/25.
+ * Created by EstherLacan on 2019/1/25.
  */
 public class C2 extends C1 {
 

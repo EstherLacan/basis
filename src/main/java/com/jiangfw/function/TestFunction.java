@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Created by jWX542257 on 2019/1/3.
+ * Created by EstherLacan on 2019/1/3.
  */
 public class TestFunction {
 

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by jWX542257 on 2019/1/31.
+ * Created by EstherLacan on 2019/1/31.
  */
 public class RandomAccessTest {
 

@@ -3,7 +3,7 @@ package com.jiangfw.concurrent;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by jWX542257 on 2019/1/18.
+ * Created by EstherLacan on 2019/1/18.
  */
 public class TestCountDownLatch {
 

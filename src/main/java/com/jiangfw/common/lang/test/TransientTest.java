@@ -9,6 +9,8 @@ import java.util.Date;
 
 public class TransientTest implements Serializable {
 
+    private static final long serialVersionUID = -9025784258647713070L;
+
     /**
      * <p>
      * Description:

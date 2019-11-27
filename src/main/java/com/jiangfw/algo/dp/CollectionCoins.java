@@ -5,13 +5,17 @@ import java.util.Map;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * 通过不同的种类的硬币，组合成指定的金额，并且用最少的硬币数.
- * Created by EstherLacan on 2019/2/11.
+ * 通过不同的种类的硬币，组合成指定的金额，并且用最少的硬币数. Created by EstherLacan on 2019/2/11.
  */
 public class CollectionCoins {
 
     private static Map<Integer, Integer> map = new HashMap<>();
-    private static Map<Integer, StringBuilder> before = new HashMap<>();//前一次操作的记录
+
+    /**
+     * 前一次操作的记录.
+     */
+
+    private static Map<Integer, StringBuilder> before = new HashMap<>();
 
     /**
      * 收集不同硬币的组合，最后的总额为amount值，并且硬币数量最少.
@@ -22,6 +26,7 @@ public class CollectionCoins {
         }
 
         if (ArrayUtils.isNotEmpty(coins)) {
+            // 硬币中已经有金额和所需金额匹配，直接返回1就行了
             if (ArrayUtils.contains(coins, amount)) {
                 before.put(amount, new StringBuilder("一个" + amount + "元的硬币"));
                 return 1;
@@ -71,8 +76,10 @@ public class CollectionCoins {
 
 
     public static void main(String[] args) {
+        //不是用越大金额的硬币，数量就越少
+        //比如 7 = 5+1+1   or 3+4
         int[] coins = {1, 3, 4, 5};
-        int count = 7;
+        int count = 12;
         System.out.println(numberOfCoins(coins, count));
         System.out.println(before.get(count).toString());
     }

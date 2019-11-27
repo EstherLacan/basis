@@ -54,19 +54,19 @@ public class Process {
      * need=max-allocation
      */
     private void setNeed() {
-        this.need = new HashMap<Resource, Integer>();
+        this.need = new HashMap<>();
         Set<Resource> allResSet = max.keySet();
         Object[] all = allResSet.toArray();
         for (int i = 0; i < all.length; i++) {
-            int r = max.get((Resource) all[i]);
-            need.put((Resource) all[i], r - (int) allocation.get(all[i]));
+            int r = max.get(all[i]);
+            need.put((Resource) all[i], r - allocation.get(all[i]));
         }
     }
 
     /**
      * 向系统请求资源
      */
-    public boolean Request(Map<Resource, Integer> available) {
+    public boolean request(Map<Resource, Integer> available) {
         Set<Resource> allResSet = available.keySet();
         Object[] all = allResSet.toArray();
         for (int i = 0; i < all.length; i++) {

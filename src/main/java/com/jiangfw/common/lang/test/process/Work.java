@@ -38,7 +38,7 @@ public class Work {
      */
     public void doWork() {
         for (int i = 0; i < this.proc.size(); i++) {
-            if (proc.get(i).Request(this.availRes)) {
+            if (proc.get(i).request(this.availRes)) {
                 System.out.println(proc.get(i).getName() + "进程已完毕，下个进程正在请求");
             }
         }

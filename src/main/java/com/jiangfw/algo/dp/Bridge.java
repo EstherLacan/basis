@@ -1,14 +1,15 @@
 package com.jiangfw.algo.dp;
 
-import java.util.Arrays;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 /**
  * 【例题1】在一个夜黑风高的晚上，有n（n <= 50）个小朋友在桥的这边， 现在他们需要过桥，但是由于桥很窄，每次只允许不大于两人通过，他们只有一个手电筒，
  * 所以每次过桥的两个人需要把手电筒带回来，i号小朋友过桥的时间为T[i]， 两个人过桥的总时间为二者中时间长者。问所有小朋友过桥的总时间最短是多少。
  * 原文链接：https://blog.csdn.net/u013309870/article/details/75193592
  *
- * @author jWX542257
+ * @author jiangfengwei
  */
 public class Bridge {
 

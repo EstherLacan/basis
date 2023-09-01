@@ -18,7 +18,7 @@ public class MyClassLoader extends ClassLoader {
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         Class clazz = null;
         String classFileName = name + ".class";
-        File classFile = new File(classFileName);
+        File classFile = new File("target/classes/com/jiangfw/jvm/" + classFileName);
         if (classFile.exists()) {
             try (FileChannel fileChannel = new FileInputStream(classFile)
                     .getChannel()) {
@@ -31,7 +31,13 @@ public class MyClassLoader extends ClassLoader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+        } /*else {
+            try {
+                classFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }*/
         if (clazz == null) {
             throw new ClassNotFoundException();
         }
@@ -42,7 +48,8 @@ public class MyClassLoader extends ClassLoader {
     public static void main(String[] args)
             throws InvocationTargetException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException {
         MyClassLoader myClassLoader = new MyClassLoader();
-        Class<?> clazz = myClassLoader.loadClass("Hello");
+        System.out.println(myClassLoader.getPackages());
+        Class<?> clazz = myClassLoader.loadClass("HelloClass");
         Method sayHello = clazz.getMethod("sayHello");
         sayHello.invoke(clazz);
     }

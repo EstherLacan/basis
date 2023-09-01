@@ -8,7 +8,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Created by EstherLacan on 2019/1/3.
+ * @author EstherLacan
+ * @date 2019/1/3
  */
 public class TestFunction {
 
@@ -27,7 +28,7 @@ public class TestFunction {
                 .mapToObj(i -> "a" + i)
                 .forEach(System.out::println);
 
-        Converter<String, Integer> converter = (from) -> Integer.valueOf(from);
+        Converter<String, Integer> converter = Integer::valueOf;
         Integer converted = converter.convert("123");
         System.out.println(converted);    // 123
 
@@ -38,7 +39,7 @@ public class TestFunction {
         System.out.println(fun1.andThen(fun2).apply(3));
         System.out.println(fun2.andThen(fun1).apply(3));
 
-        testco("1234", a -> Integer.valueOf(a));
+        testco("1234", Integer::valueOf);
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
@@ -66,7 +67,7 @@ public class TestFunction {
         eval(list, n -> n > 3);
     }
 
-    public static void sayHello() {
+    public void sayHello() {
         System.out.println("Hello,I am ....");
     }
 

@@ -10,7 +10,7 @@ public class TestMain {
 
         short a1 = 1;
         Short aa1 = 1;
-        System.out.println(a1 == aa1.shortValue());
+        System.out.println(a1 == aa1);
         BigDecimal a = new BigDecimal(0);
         BigDecimal b = new BigDecimal("0.0");
         System.out.println(b.intValue() == 0);

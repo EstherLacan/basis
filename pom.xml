@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jiangfw</groupId>
     <artifactId>basis</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jvm</module>
+    </modules>
     <properties>
         <!-- 主要依赖库的版本定义 -->
         <spring.version>5.0.7.RELEASE</spring.version>
@@ -43,7 +47,7 @@
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
         <commons-lang.version>2.6</commons-lang.version>
         <commons-lang3.version>3.5</commons-lang3.version>
-        <commons-logging.version>1.0.4</commons-logging.version>
+        <commons-logging.version>1.2</commons-logging.version>
         <commons-logging-api.version>1.1</commons-logging-api.version>
         <commons-validator.version>1.3.1</commons-validator.version>
         <commons-email.version>1.2</commons-email.version>
@@ -661,7 +665,7 @@
                                     <tasks>
                                         <echo>Using env.test.properties</echo>
                                         <copy file="src/main/resources/env.test.properties" tofile
-                                            ="${project.build.outputDirectory}/env.properties"/>
+                                                ="${project.build.outputDirectory}/env.properties"/>
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -688,7 +692,7 @@
                                     <tasks>
                                         <echo>Using env.properties</echo>
                                         <copy file="src/main/resources/env.debug.properties" tofile
-                                            ="${project.build.outputDirectory}/env.properties"/>
+                                                ="${project.build.outputDirectory}/env.properties"/>
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -729,6 +733,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

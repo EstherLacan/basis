@@ -1,14 +1,10 @@
 package com.jiangfw.file;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.apache.commons.io.FileUtils;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.commons.io.FileUtils;
 
 /**
  * 文件分割
@@ -17,7 +13,7 @@ import org.apache.commons.io.FileUtils;
 public class FileSpit {
 
     public static void main(String[] args) throws IOException {
-        spit("D:\\tmp\\pom.txt", "d:\\tmp", 5000L);
+        spit("tmp\\pom.txt", "tmp", 5000L);
     }
 
     private static void spit(String filePath, String saveDir, Long perFileLineNum)

@@ -34,6 +34,6 @@ public class ProcessUtil {
     }
 
     public static void main(String[] args) {
-        execProcess("python D:\\Script\\python\\primary\\for.py");
+        execProcess("python ~\\Documents\\temp\\Script\\python\\primary\\for.py");
     }
 }

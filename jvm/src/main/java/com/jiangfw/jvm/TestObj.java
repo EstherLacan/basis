@@ -18,7 +18,7 @@ public class TestObj {
     static Obj obj = new Obj();
 
     public static void main(String[] args) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("D:\\obj"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("TestObjOut"));
         ObjectOutputStream oos = new ObjectOutputStream(fileOutputStream);
         oos.writeObject(obj);
         oos.flush();

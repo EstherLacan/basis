@@ -24,6 +24,7 @@ public class Join {
             this.thread = thread;
         }
 
+        @Override
         public void run() {
             try {
                 thread.join();

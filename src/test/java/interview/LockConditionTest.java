@@ -106,7 +106,7 @@ public class LockConditionTest {
         Thread.sleep(1000L);
         lock.lock();
         System.out.println("***************");
-        condition2.signal();//condition 1234 先唤醒谁就第一个执行
+        condition1.signal();//condition 1234 先唤醒谁就第一个执行
         lock.unlock();
         t1.join();
         t2.join();

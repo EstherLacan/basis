@@ -13,7 +13,7 @@
     </modules>
     <properties>
         <!-- 主要依赖库的版本定义 -->
-        <spring.version>5.0.7.RELEASE</spring.version>
+        <spring.version>5.2.7.RELEASE</spring.version>
         <hibernate.version>4.1.0.Final</hibernate.version>
 
         <!-- 工作流 -->
